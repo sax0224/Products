@@ -2,6 +2,7 @@ package com.vincent.demo.controller;
 
 import com.vincent.demo.entity.Product;
 import com.vincent.demo.parameter.ProductQueryParameter;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import com.vincent.demo.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -54,7 +55,7 @@ public class ProductController {
     @DeleteMapping("/{id}")
     public ResponseEntity deleteProduct(@PathVariable("id") String id) {
         productService.deleteProduct(id);
-        return ResponseEntity.ok().build();
+        return new ResponseEntity<String>("Deleted", HttpStatus.OK);
     }
 
 }
