@@ -1,5 +1,10 @@
 # Product
 
+	Ver 1.0.2
+	-------------------------------
+	Add type for data struct.
+	
+
 - #### Product API
     
     > **GET all product** http://localhost:8082/products/
